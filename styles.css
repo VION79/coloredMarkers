@@ -1,0 +1,38 @@
+/*
+Step 8
+Now that your external CSS file is set up, you can start styling the page.
+As a reminder, here's how to target a paragraph element and align it to the right:
+
+p {
+  text-align: right;
+}
+
+Create a new CSS rule that targets the h1 element, and set its text-align property to center.
+*/
+
+h1 {
+    text-align: center;
+}
+
+/*
+Step 11
+It's time to add some color to the marker. Remember that one way to add color to an element is to use a color keyword like 
+black, cyan, or yellow. As a reminder, here's how to target the class freecodecamp:
+
+.freecodecamp {
+}
+
+Create a new CSS rule that targets the class marker, and set its background-color property to red. Note: You will not see any 
+changes after adding the CSS.
+
+Step 12
+The background color was applied, but since the marker div element is empty, it doesn't have any height by default. In your 
+.marker CSS rule, set the height property to 25px and the width property to 200px
+
+*/
+
+.marker {
+    background-color: red;
+    height: 25px;
+    width: 200px;
+}
