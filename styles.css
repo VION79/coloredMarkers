@@ -170,6 +170,136 @@ these colors produce strong visual contrast and appear brighter. In the rgb func
 to the max of 255 to produce pure red. In the rgb function for .two CSS rule, set the values for green and blue to the max of 
 255 to produce cyan.
 
+Step 38
+Next, in the .one rule, use the rgb function to set the background-color to black. And in the .two rule, use the rgb function 
+to set the background-color to red.
+
+Step 39
+Notice how your eyes are naturally drawn to the red color in the center? When designing a site, you can use this effect to 
+draw attention to important headings, buttons, or links. There are several other important color combinations outside of 
+complementary colors, but you'll learn those a bit later. For now, use the rgb function in the .two rule to set the 
+background-color to black.
+
+Step 40
+And in the h1 rule, remove the background-color property and value to go back to the default white color.
+
+Step 42
+Update the .one class selector to target the new red class.
+
+Step 43
+And update the rgb function in the .red rule so that the red value is at the max.
+
+Step 45
+Update the CSS class selector .two so it targets the new green class. And update the .three selector so it targets the 
+new blue class.
+
+Step 46
+A very common way to apply color to an element with CSS is with hexadecimal or hex values. While hex values sound complicated, 
+they're really just another form of RGB values. Hex color values start with a # character and take six characters from 0-9 and 
+A-F. The first pair of characters represent red, the second pair represent green, and the third pair represent blue. For 
+example, #4B5320 In the .green CSS rule, set the background-color property to a hex color code with the values 00 for red, 
+FF for green, and 00 blue.
+
+Step 47
+You may already be familiar with decimal, or base 10 values, which go from 0 - 9. Hexadecimal, or base 16 values, go from 
+0 - 9, then A - F: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F. With hex colors, 00 is 0% of that color, and FF is 100%. 
+So #00FF00 translates to 0% red, 100% green, and 0% blue, and is the same as rgb(0, 255, 0). Lower the intensity of green by 
+setting green value of the hex color to 7F.
+
+Step 48
+The HSL color model, or hue, saturation, and lightness, is another way to represent colors.
+The CSS hsl function accepts 3 values: a number from 0 to 360 for hue, a percentage from 0 to 100 for saturation, and a 
+percentage from 0 to 100 for lightness.
+If you imagine a color wheel, the hue red is at 0 degrees, green is at 120 degrees, and blue is at 240 degrees.
+Saturation is the intensity of a color from 0%, or gray, to 100% for pure color.
+Lightness is how bright a color appears, from 0%, or complete black, to 100%, complete white, with 50% being neutral.
+In the .blue CSS rule, use the hsl function to change the background-color property to pure blue. Set the hue to 240, the 
+saturation to 100%, and the lightness to 50%.
+
+Step 49
+You've learned a few ways to set flat colors in CSS, but you can also use a color transition, or gradient, on an element.
+A gradient is when one color transitions into another. The CSS linear-gradient function lets you control the direction of the 
+transition along a line, and which colors are used. One thing to remember is that the linear-gradient function actually creates 
+an image element, and is usually paired with the background property which can accept an image as a value.
+In the .red CSS rule, change the background-color property to background.
+
+Step 50
+The linear-gradient function is very flexible -- here is the basic syntax you'll use in this tutorial:
+linear-gradient(gradientDirection, color1, color2, ...);
+gradientDirection is the direction of the line used for the transition. color1 and color2 are color arguments, which are the 
+colors that will be used in the transition itself. These can be any type of color, including color keywords, hex, rgb, or hsl. 
+Now you'll apply a red-to-green gradient along a 90 degree line to the first marker. First, in the .red CSS rule, set the 
+background property to linear-gradient(), and pass it the value 90deg as the gradientDirection.
+
+tep 51
+You'll use the rgb function for the colors of this gradient.
+In the linear-gradient function, use the rgb function to set the first color argument to pure red.
+
+Step 52
+You won't see gradient yet because the linear-gradient function needs at least two color arguments to work.
+In the same linear-gradient function, use the rgb function to set the second color argument to pure green.
+
+Step 53
+As you can see, the linear-gradient function produced a smooth red-green gradient. While the linear-gradient function needs a 
+minimum of two color arguments to work, it can accept many color arguments. Use the rgb function to add pure blue as the third 
+color argument to the linear-gradient function.
+
+Step 54
+Color-stops allow you to fine-tune where colors are placed along the gradient line. They are a length unit like px or 
+percentages that follow a color in the linear-gradient function.
+For example, in this red-black gradient, the transition from red to black takes place at the 90% point along the gradient line, 
+so red takes up most of the available space:
+linear-gradient(90deg, red 90%, black);
+In the linear-gradient function, add a 75% color stop after the first red color argument. Do not add color stops to the other 
+colors arguments.
+
+Step 55
+Now that you know the basics of how the linear-gradient function and color-stops work, you can use them to make the markers 
+look more realistic.
+In the linear-gradient function, set gradientDirection to 180deg.
+
+Step 56
+Next, set the color-stop for red to 0%, the color-stop for green to 50%, and the color-stop for blue to 100%.
+
+Step 57
+Now that the color-stops are set, you'll apply different shades of red to each color argument in the linear-gradient function. 
+The shades on the top and bottom edges of the marker will be darker, while the one in the middle will be lighter, as if 
+there's a light above it.
+For the first color argument, which is currently pure red, update the rgb function so the value for red is 122, the value for 
+green is 74, and the value for blue is 14.
+
+Step 58
+Now modify the second color argument in the linear-gradient function, which is currently pure green.
+Update the rgb function so the value for red is 245, the value of green is 62, and the value of blue is 113.
+
+Step 59
+Finally, modify the third color argument in the linear-gradient function, which is currently pure blue.
+Update the rgb function so the value for red is 162, the value of green is 27, and the value of blue is 27.
+
+Step 60
+The red marker is looking much more realistic. Now you'll do the same for the green marker, using a combination of the linear-gradient function and hex colors.
+In the .green CSS rule, change the background-color property to background.
+
+Step 61Passed
+For this marker, you'll use hex color codes for your gradient.
+Use the linear-gradient function and set gradientDirection to 180deg. And for the first color argument, use a hex color code 
+with the values 55 for red, 68 for green, and 0D for blue.
+
+Step 62
+For the second color argument, use a hex color code with the values 71 for red, F5 for green, and 3E for blue.
+
+Step 63
+That's looking better, but the bottom edge of the green marker needs to be darker to add a little more dimension.
+In the same linear-gradient function, add a hex color code with the values 11 for red, 6C for green, and 31 for blue as the 
+third color argument.
+
+Step 64
+Even without the color-stops, you might have noticed that the colors for the green marker transition at the same points as the 
+red marker. The first color is at the start (0%), the second is in the middle (50%), and the last is at the end (100%) of the 
+gradient line.
+The linear-gradient function automatically calculates these values for you, and places colors evenly along the gradient line 
+by default. In the .red CSS rule, remove the three color stops from the linear-gradient function to clean up your code a bit.
+
 
 */
 
@@ -179,15 +309,19 @@ to the max of 255 to produce pure red. In the rgb function for .two CSS rule, se
 }
 
 
-.one {
-    background-color: rgb(127, 255, 0); /*be mindful of the spaces as rgb (255, 0, 0) would like work*/
+.red {
+    background: linear-gradient(180deg, rgb(122, 74, 14) 0%, rgb(245, 62, 113) 50%, rgb(0, 0, 255) 100%); /*be mindful of the spaces as rgb (255, 0, 0) would like work*/
 }
 
+
+
 /*
+.one {
+    background-color: rgb(127, 255, 0); be mindful of the spaces as rgb (255, 0, 0) would like work
+}
 .two {
     background-color: rgb(0, 255, 0);
   }
-*/
 
 .two {
     background-color: rgb(0, 127, 255);
@@ -195,6 +329,18 @@ to the max of 255 to produce pure red. In the rgb function for .two CSS rule, se
   
 .three {
     background-color: rgb(255, 0, 127);
+  }
+
+*/
+
+.green {
+    background: linear-gradient(180deg, #55680D, #71F53E);
+  }
+  
+.blue {
+    background-color: rgb(255, 0, 127);
+    background-color: hsl(240, 100%, 50%);
+
   }
 
 
